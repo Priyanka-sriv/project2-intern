@@ -1,8 +1,6 @@
 const collegeModel = require('../Models/collegeModel')
 const internModel = require('../Models/internModel')
 
-
-
 const isValid = function (value) {
     if (typeof (value) === 'undefined' || value === null) return false
     if (typeof (value) === 'string' && value.trim().length == 0) return false
@@ -18,6 +16,7 @@ const isValidRequestBody = function (reqBody) {
 //***************************CREATE COLLEGE**********************************/
 
 const createCollege = async function (req, res) {
+    // res.setHeader("Access-Control-Allow-Origin","*")
     try {
 
         const requestBody = req.body
@@ -81,6 +80,7 @@ const createCollege = async function (req, res) {
 //******************Get college**************************************/
 
 const getCollege = async (req, res)=>{
+    // res.setHeader("Access-Control-Allow-Origin","*")
   try {
 
     let filter = req.query

@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+
 const internController = require('../Controllers/internController')
 const {createCollege,getCollege}=require("../Controllers/collegeController")
  
